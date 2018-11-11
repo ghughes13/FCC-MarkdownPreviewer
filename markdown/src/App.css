@@ -1,44 +1,114 @@
 body {
-  background: green;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+#editor {
+  height: 325px;
+  width: 95%;
+  border: solid 1px rgb(91, 91, 91);
+  border-radius: 5px;
+  background: rgb(249, 249, 249);
+  padding-top: 10px;
+  padding-left: 10px;
+  -webkit-box-shadow: 13px 13px 10px -8px rgba(173,173,173,1);
+  -moz-box-shadow: 13px 13px 10px -8px rgba(173,173,173,1);
+  box-shadow: 13px 13px 10px -8px rgba(173,173,173,1);
+}
+
+#preview {
+  height: 325px;
+  width: 95%;
+  overflow-y: auto;
+  border: solid 1px rgb(91, 91, 91);
+  background: rgb(173,173,173);
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  -webkit-box-shadow: 13px 13px 10px -8px rgba(173,173,173,1);
+  -moz-box-shadow: 13px 13px 10px -8px rgba(173,173,173,1);
+  box-shadow: 13px 13px 10px -8px rgba(173,173,173,1);
 }
 
 
-#preview {
-  blockquote {
+#preview blockquote {
     border-left: 3px solid #224B4B;
     color: #224B4B;
     padding-left: 5px;
     margin-left: 25px;
   }
 
-  code {
+#preview code {
     background: white;
     padding: 1px 4px 2px 4px;
     font-size: 12px;
     font-weight: bold;
   }
 
-  pre {
+#preview  pre {
     background: white;
     padding: 5px 0 5px 5px;
   }
 
-  h1 {
-    border-bottom: 2px solid $darkAccent;
+#preview  h1 {
+    border-bottom: 2px solid #224B4B;
   }
 
-  h2 {
-    border-bottom: 1px solid $darkAccent;
+#preview  h2 {
+    border-bottom: 1px solid #224B4B;
   }
 
-  table {
+#preview  table {
     border-collapse: collapse;
   }
 
-  td,
-  th {
-    border: 2px solid $darkAccent;
+#preview  td, #preview  th {
+    border: 2px solid #224B4B;
     padding-left: 5px;
     padding-right: 5px;
+  }
+
+footer {
+  background: rgb(116, 173, 221);
+  padding: 2px;
+  border-radius: 5px;
+  margin-top: 25px;
+}
+
+
+  @media (min-width: 1020px) {
+
+    .inputRender {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    #editor {
+      width: 45vw;
+      height: 60vh;
+    }
+
+    #preview {
+      width: 45vw;
+      height: 60.5vh;
+    }
+
+    .render {
+      margin-right: 5%;
+    }
+  }
+
+@media (min-width: 1600px) {
+  #editor {
+    width: 725px;
+  }
+
+  #preview {
+    width: 730px;
   }
 }

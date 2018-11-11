@@ -6,7 +6,7 @@ marked.setOptions({
 breaks: true,
 });
 
-class Input extends Component {
+class Output extends Component {
   constructor(props) {
     super(props);
     this.state = {value: `# Welcome to my React Markdown Previewer!
@@ -68,16 +68,15 @@ And here. | Okay. | I think we get it.
 
   handleChange(event) {
     this.setState({value: event.target.value});
-
   }
 
   render() {
     return (
       <div className = 'inputRender'>
-        <Render handleChange={this.handleChange.bind(this)}/>
-        <div className="input">
+        <Render handleChange={this.handleChange.bind(this)} placeholder={this.state.value}/>
+        <div className="preview">
           <h2>Preview</h2>
-          <p id="preview" dangerouslySetInnerHTML={this.getMarkdownText()}></p>
+          <p disabled id="preview" dangerouslySetInnerHTML={this.getMarkdownText()} ></p>
         </div>
       </div>
     );
@@ -85,4 +84,4 @@ And here. | Okay. | I think we get it.
 }
 
 
-export default Input;
+export default Output;
